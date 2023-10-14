@@ -1,0 +1,266 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+
+*{
+  padding: 0;
+  margin:  0;
+  box-sizing:  border-box;
+  font-family: 'NTR', sans-serif;
+}
+
+
+body{
+  width:  100%;
+  height:  100vh;
+  display:  flex ;
+  justify-content:  center;
+  align-items:  center;
+  background:  #101010;
+}
+
+.box{
+  background: transparent;
+  width:  100%;
+  height:  560px;
+  display : flex;
+  justify-content:  center;
+  align-items:  center;
+}
+
+.contact {
+  width: 380px;
+  height:  85%;
+  background:  #101010;
+  position:  relative;
+  border-radius:  18px;
+  }
+
+
+.contact::before{
+content:  '';
+position:  absolute;
+top: -6px;
+left:  -6px;
+right:  -6px;
+bottom : -6px;
+background: rgb(225,163,255);
+background: linear-gradient(150deg, rgba(225,163,255,1) 0%, rgba(144,255,247,1) 50%, rgba(255,238,156,1) 99%);
+z-index: -1;
+border-radius:  20px;
+animation: rotate 1.2s linear infinite;
+}
+
+
+
+.contact:hover:after{
+content:  '';
+position:  absolute;
+top: -6px;
+left:  -6px;
+right:  -6px;
+bottom : -6px;
+background: rgb(225,163,255);
+background: linear-gradient(150deg, rgba(225,163,255,1) 0%, rgba(144,255,247,1) 50%, rgba(255,238,156,1) 99%);
+z-index: -1;
+border-radius:  20px;
+filter:  blur( 9px);
+transition:  .4s ease-out;
+}
+
+
+@keyframes rotate {
+  0%{
+    filter:  hue-rotate(0deg);
+  }
+  
+  100%{
+    filter:  hue-rotate( 360deg);
+  }
+}
+
+.box .contact h2{
+  text-align:  center ;
+  margin-top:  10%;
+  text-transform:  uppercase;
+  font-size:  2.5em;
+  color:  #ececec;
+  letter-spacing:  2px;
+}
+
+.box .contact .info{
+  background: transparent;
+  display:  flex;
+  flex-flow:  column nowrap;
+  justify-content:  space-around;
+  align-items:  center ;
+  width : 100%;
+  height:  25%;
+}
+
+.box .contact input{
+  caret-color:  #fff;
+  color:  #fff;
+}
+
+.box .contact .info input{
+  border:  none;
+  outline:  none;
+  width:  80%;
+  height: 30%;
+  padding-left: 10px;
+  background:  #101010;
+  position:  relative;
+  border-bottom:  1.5px solid #999;
+}
+
+.box .contact input:hover::placeholder{
+  color:  transparent;
+}
+
+.box .contact .content {
+  background: transparent;
+  width: 100%;
+  height:  30%;
+  display:  flex;
+  flex-flow:  column nowrap;
+  justify-content:  space-around;
+  align-items:  center ;
+}
+
+.box .contact .content input{
+  width:  80%;
+  height:  90%;
+  padding-left:  10px;
+  background:  transparent;
+  outline:  none;
+  border:  none;
+  border-bottom:  1.5px solid #999;
+  text-transform:  capitalize;
+  
+}
+
+
+
+.box .contact .btn-box{
+  width: 100%;
+  height:  18%;
+  background: transparent;
+  display:  flex;
+  flex-flow:  column nowrap;
+  justify-content:  space-around;
+  align-items:  center ;
+}
+
+.btn-box button{
+  width:  40%;
+  height: 55%;
+  font-size:  1.6em;
+  letter-spacing:  2px;
+  text-transform:  uppercase;
+  display:  flex;
+  justify-content:center ;
+  align-items:  center ;
+  color:  #fff;
+  background : linear-gradient(150deg, rgba(225,163,255,1) 0%, rgba(144,255,247,1) 50%, rgba(255,238,156,1) 99%) ;
+  font-weight:  bold;
+  animation: rotate 1.2s linear infinite;
+  border:  none;
+  border-radius:  25px;
+  position:  relative;
+  transition:  .4s ease-out;
+}
+
+.btn-box button span{
+  position:  absolute;
+  background:  #101010;
+  width:  96%;
+  height:  90%;
+  border:  none;
+  border-radius: 25px;
+  display:  flex;
+  justify-content:center ;
+  align-items:  center ;
+  transition:  .4s ease-out;
+}
+
+
+.box .contact input:hover{
+  border-bottom:  1.5px solid #fff;
+}
+
+.box .contact .btn-box button:hover{
+background: linear-gradient(150deg, rgba(225,163,255,1) 0%, rgba(144,255,247,1) 50%, rgba(255,238,156,1) 99%);
+letter-spacing: 2.5px;
+border:  none;
+box-shadow:  0 0 3px 2px  rgba(225,163,255,1) ;
+color:  #000;
+font-size: 1.8em;  
+font-weight:  bold;
+  }
+
+.box .contact .btn-box button:hover span{
+  background : transparent ;
+}
+
+@media screen and (max-width: 500px){
+.contact {
+  width: 280px;
+  height:  60%;
+  border-radius:  10px;
+  }
+.contact::before{
+content:  '';
+position:  absolute;
+top: -3px;
+left:  -3px;
+right:  -3px;
+bottom : -3px;
+border-radius:  11px;
+}
+
+
+
+.contact:hover:after{
+content:  '';
+position:  absolute;
+top: -3px;
+left:  -3px;
+right:  -3px;
+bottom : -3px;
+border-radius:  10px;
+filter:  blur( 6px);
+}
+.box .contact h2{
+  margin-top:  10%;
+  font-size:  1.8em;
+}
+
+
+
+
+.btn-box button{
+  font-size:  1.2em;
+}
+
+.btn-box button span{
+  width:  95%;
+  height:  85%;
+}
+
+
+.box .contact .btn-box button:hover{
+letter-spacing: 2.1px;
+box-shadow:  0 0 3px 1px  rgba(225,163,255,1) ;
+color:  #000;
+font-size: 1.3em;  
+font-weight:  bold;
+  }
+}
+
+
+
+
+
+
+
